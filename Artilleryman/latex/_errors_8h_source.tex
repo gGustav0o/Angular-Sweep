@@ -1,0 +1,29 @@
+\doxysection{Errors.\+h}
+\hypertarget{_errors_8h_source}{}\label{_errors_8h_source}\mbox{\hyperlink{_errors_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ ERROR\_CODE\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ ERROR\_CODE\_H\ }}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdarg.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Коды ошибок}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{enum}\ ErrorCode\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ UNEXPECTED\_NUMBER\_OF\_ARGUMENTS}
+\DoxyCodeLine{00018\ \ \ \ \ ,\ FILE\_OPENING\_ERROR}
+\DoxyCodeLine{00019\ \ \ \ \ ,\ FILE\_CLOSING\_ERROR}
+\DoxyCodeLine{00020\ \ \ \ \ ,\ FILE\_READING\_ERROR}
+\DoxyCodeLine{00021\ \ \ \ \ ,\ MEMORY\_ERROR}
+\DoxyCodeLine{00022\ \ \ \ \ ,\ NULL\_POINTER\_ERROR}
+\DoxyCodeLine{00023\ \ \ \ \ ,\ CALCULATING\_ERROR}
+\DoxyCodeLine{00024\ \ \ \ \ ,\ UNEXPECTED\_ARGUMENT}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_errors_8h_a21db7a358fa64f9fe3addc7441097637}{handleError}}(\textcolor{keyword}{enum}\ ErrorCode\ errorCode);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

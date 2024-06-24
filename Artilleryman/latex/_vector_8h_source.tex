@@ -1,0 +1,47 @@
+\doxysection{Vector.\+h}
+\hypertarget{_vector_8h_source}{}\label{_vector_8h_source}\mbox{\hyperlink{_vector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ VECTOR\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ VECTOR\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CVECTOR\_INIT\_CAPACITY\ 16}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <malloc.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_errors_8h}{Errors.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}**\ \mbox{\hyperlink{struct_vector_ae33d8e69039b6b32e5d1fc6a9f25724e}{data}};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_vector_ae4665570b1b91f783645fa0e2eb884af}{size}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_vector_ad2b86d50e94fbaae2cc65a320b092b0a}{capacity}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{struct_vector_a3c639c7e669e4a32b9e953e88b0ba90b}{elementSize}};}
+\DoxyCodeLine{00036\ \}\ \mbox{\hyperlink{struct_vector}{Vector}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_vector_8h_a1f9b0a05ac8a6b3d3fc7cb35a3e77dc5}{vectorInit}}(\mbox{\hyperlink{struct_vector}{Vector}}*\ vector,\ \textcolor{keywordtype}{size\_t}\ elementSize);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{_vector_8h_a7947fe57d9b961845150defd95d89625}{vectorGetSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_vector}{Vector}}*\ vector);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_vector_8h_a087fb704c3be26f36327476fd27853e4}{vectorPush}}(\mbox{\hyperlink{struct_vector}{Vector}}*\ vector,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ element);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_vector_8h_a3df0e267e82ada86f061041de99ff350}{vectorSetElement}}(\mbox{\hyperlink{struct_vector}{Vector}}*\ vector,\ \textcolor{keywordtype}{size\_t}\ index,\ \textcolor{keywordtype}{void}*\ element);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_vector_8h_a82bd05a07ad24cec9e527fc32c585724}{vectorDeleteElement}}(\mbox{\hyperlink{struct_vector}{Vector}}*\ vector,\ \textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{_vector_8h_ad611858a02f060c642261e7b135233e5}{vectorGetElement}}(\mbox{\hyperlink{struct_vector}{Vector}}*\ vector,\ \textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_vector_8h_ab03c01f1a4ee13945509a467d9e88573}{vectorResize}}(\mbox{\hyperlink{struct_vector}{Vector}}*\ vector,\ \textcolor{keywordtype}{size\_t}\ capasity);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vector_8h_a728f0763820a4bf648a46cd465a787a6}{vectorClear}}(\mbox{\hyperlink{struct_vector}{Vector}}*\ vector);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_vector_8h_af050b8a0206803433d518c4a8561e0f2}{vectorSort}}(\mbox{\hyperlink{struct_vector}{Vector}}*\ vector,\ \textcolor{keywordtype}{int}\ (*compare)\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*));}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

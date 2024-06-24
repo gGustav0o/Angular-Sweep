@@ -1,0 +1,38 @@
+\doxysection{Artillerty\+Calculator.\+h}
+\hypertarget{_artillerty_calculator_8h_source}{}\label{_artillerty_calculator_8h_source}\mbox{\hyperlink{_artillerty_calculator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ ARTILLERY\_CALCULATOR\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ ARTILLERY\_CALCULATOR\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_errors_8h}{Errors.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vector_8h}{Vector.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_point_ab99c56589bc8ad5fa5071387110a5bc7}{x}},\ y;}
+\DoxyCodeLine{00029\ \}\ \mbox{\hyperlink{struct_point}{Point}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \mbox{\hyperlink{struct_position_a9a33e15133bf62f7bac604746f1227b5}{angle}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{short}\ \ \ \ \ \mbox{\hyperlink{struct_position_a66d91026e1383bc2119bf29062828b12}{entered}};}
+\DoxyCodeLine{00042\ \}\ \mbox{\hyperlink{struct_position}{Position}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_artillerty_calculator_8h_abcb65adb04d8110ffc48975669aa5487}{comparePositions}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ p,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ q);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{_artillerty_calculator_8h_a362ac5a4d90f8f502b417a6b9eb0bb25}{getDistance}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}*\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}*\ b);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_artillerty_calculator_8h_aebf854e9a0a0a52f088dfb632b1e0a24}{calculateDistances}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}*\ points,\ \textcolor{keywordtype}{double}**\ distances,\ \textcolor{keywordtype}{size\_t}\ pointsNumber);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_artillerty_calculator_8h_a94350a11418694e734812bcb76b5d221}{getPointsInside}}(\textcolor{keywordtype}{size\_t}\ pointIndex,\ \textcolor{keywordtype}{int}\ radius,\ \textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}**\ distances,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}*\ points,\ \mbox{\hyperlink{struct_position}{Position}}*\ bestPosition);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{double}**\ \mbox{\hyperlink{_artillerty_calculator_8h_a309f1346df22e660341a70ad1898cd38}{initDistances}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}*\ points,\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00103\ \mbox{\hyperlink{struct_point}{Point}}\ \mbox{\hyperlink{_artillerty_calculator_8h_a92922665b3d2bfce640af99fdf9df330}{getCircleCenter}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_position}{Position}}*\ position,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}*\ point,\ \textcolor{keywordtype}{int}\ radius);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00113\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{_artillerty_calculator_8h_aac33938e608b6628beb5a199cab0d36d}{calculateTarget}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_point}{Point}}*\ points,\ \mbox{\hyperlink{struct_point}{Point}}*\ optimalPoint,\ \textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keywordtype}{int}\ radius);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

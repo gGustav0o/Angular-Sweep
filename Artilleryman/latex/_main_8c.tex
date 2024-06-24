@@ -1,0 +1,56 @@
+\doxysection{Main.\+c File Reference}
+\hypertarget{_main_8c}{}\label{_main_8c}\index{Main.c@{Main.c}}
+
+
+ќсновной файл программы  
+
+
+{\ttfamily \#include "{}Artillerty\+Calculator.\+h"{}}\newline
+{\ttfamily \#include "{}Errors.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$malloc.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_main_8c_a547597a89a5e85d709dd9a3038819fda}\label{_main_8c_a547597a89a5e85d709dd9a3038819fda} 
+\#define {\bfseries MIN\+\_\+\+COORDINATE}~0
+\item 
+\Hypertarget{_main_8c_af85e90654ab929ca38457939a307b134}\label{_main_8c_af85e90654ab929ca38457939a307b134} 
+\#define {\bfseries MAX\+\_\+\+COORDINATE}~99
+\item 
+\Hypertarget{_main_8c_ac88f9ce5b7593a838af85b44031d1ea1}\label{_main_8c_ac88f9ce5b7593a838af85b44031d1ea1} 
+\#define {\bfseries ARRAY\+\_\+\+BASE\+\_\+\+SIZE}~16
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_main_8c_aa42012306df13cc9572974598465014c}{read\+Points}} (const char \texorpdfstring{$\ast$}{*}file\+Name, \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}points)
+\item 
+\Hypertarget{_main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{_main_8c_a3c04138a5bfe5d72780bb7e82a18e627} 
+int {\bfseries main} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ќсновной файл программы 
+
+—читывает аргументы и данные из файла, выводит результаты вычислений. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_main_8c_aa42012306df13cc9572974598465014c}\index{Main.c@{Main.c}!readPoints@{readPoints}}
+\index{readPoints@{readPoints}!Main.c@{Main.c}}
+\doxysubsubsection{\texorpdfstring{readPoints()}{readPoints()}}
+{\footnotesize\ttfamily \label{_main_8c_aa42012306df13cc9572974598465014c} 
+int read\+Points (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+Name}{, }\item[{\mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{points}{}\end{DoxyParamCaption})}
+
+—читывает данные из файла в массив 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+Name} & им€ файла \\
+\hline
+\mbox{\texttt{ out}}  & {\em points} & указатель на массив, в который будет производитьс€ запись \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количетво считанных элементов 
+\end{DoxyReturn}

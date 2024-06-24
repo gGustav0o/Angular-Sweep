@@ -1,0 +1,189 @@
+\doxysection{Vector.\+h File Reference}
+\hypertarget{_vector_8h}{}\label{_vector_8h}\index{Vector.h@{Vector.h}}
+
+
+Простая реализация вектора.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$malloc.\+h$>$}\newline
+{\ttfamily \#include "{}Errors.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_vector}{Vector}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_vector_8h_aea2e1fe6cb393e91d9bb73cfbf2f330b}\label{_vector_8h_aea2e1fe6cb393e91d9bb73cfbf2f330b} 
+\#define {\bfseries CVECTOR\+\_\+\+INIT\+\_\+\+CAPACITY}~16
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_vector_8h_a1f9b0a05ac8a6b3d3fc7cb35a3e77dc5}{vector\+Init}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vector, size\+\_\+t element\+Size)
+\item 
+size\+\_\+t \mbox{\hyperlink{_vector_8h_a7947fe57d9b961845150defd95d89625}{vector\+Get\+Size}} (const \mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vector)
+\item 
+int \mbox{\hyperlink{_vector_8h_a087fb704c3be26f36327476fd27853e4}{vector\+Push}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vector, const void \texorpdfstring{$\ast$}{*}element)
+\item 
+int \mbox{\hyperlink{_vector_8h_a3df0e267e82ada86f061041de99ff350}{vector\+Set\+Element}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vector, size\+\_\+t index, void \texorpdfstring{$\ast$}{*}element)
+\item 
+int \mbox{\hyperlink{_vector_8h_a82bd05a07ad24cec9e527fc32c585724}{vector\+Delete\+Element}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vector, size\+\_\+t index)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_vector_8h_ad611858a02f060c642261e7b135233e5}{vector\+Get\+Element}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vector, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{_vector_8h_ab03c01f1a4ee13945509a467d9e88573}{vector\+Resize}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vector, size\+\_\+t capasity)
+\item 
+void \mbox{\hyperlink{_vector_8h_a728f0763820a4bf648a46cd465a787a6}{vector\+Clear}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vector)
+\item 
+void \mbox{\hyperlink{_vector_8h_af050b8a0206803433d518c4a8561e0f2}{vector\+Sort}} (\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}vector, int(\texorpdfstring{$\ast$}{*}compare)(const void \texorpdfstring{$\ast$}{*}, const void \texorpdfstring{$\ast$}{*}))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Простая реализация вектора. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_vector_8h_a728f0763820a4bf648a46cd465a787a6}\index{Vector.h@{Vector.h}!vectorClear@{vectorClear}}
+\index{vectorClear@{vectorClear}!Vector.h@{Vector.h}}
+\doxysubsubsection{\texorpdfstring{vectorClear()}{vectorClear()}}
+{\footnotesize\ttfamily \label{_vector_8h_a728f0763820a4bf648a46cd465a787a6} 
+void vector\+Clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{}\end{DoxyParamCaption})}
+
+Очистить вектор Освоождает память, выделенную под элементы вектора 
+\begin{DoxyParams}{Parameters}
+{\em vector} & указатель на вектор \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_vector_8h_a82bd05a07ad24cec9e527fc32c585724}\index{Vector.h@{Vector.h}!vectorDeleteElement@{vectorDeleteElement}}
+\index{vectorDeleteElement@{vectorDeleteElement}!Vector.h@{Vector.h}}
+\doxysubsubsection{\texorpdfstring{vectorDeleteElement()}{vectorDeleteElement()}}
+{\footnotesize\ttfamily \label{_vector_8h_a82bd05a07ad24cec9e527fc32c585724} 
+int vector\+Delete\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{size\+\_\+t}]{index}{}\end{DoxyParamCaption})}
+
+Удалить элемент вектора 
+\begin{DoxyParams}{Parameters}
+{\em vector} & указатель на вектор \\
+\hline
+{\em index} & индекс удаляемого элемента \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если удаление прошло без ошибок, в противном случае -\/ 0 
+\end{DoxyReturn}
+\Hypertarget{_vector_8h_ad611858a02f060c642261e7b135233e5}\index{Vector.h@{Vector.h}!vectorGetElement@{vectorGetElement}}
+\index{vectorGetElement@{vectorGetElement}!Vector.h@{Vector.h}}
+\doxysubsubsection{\texorpdfstring{vectorGetElement()}{vectorGetElement()}}
+{\footnotesize\ttfamily \label{_vector_8h_ad611858a02f060c642261e7b135233e5} 
+void \texorpdfstring{$\ast$}{*} vector\+Get\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{size\+\_\+t}]{index}{}\end{DoxyParamCaption})}
+
+Получить элемент вектора 
+\begin{DoxyParams}{Parameters}
+{\em vector} & указатель на вектор \\
+\hline
+{\em index} & индекс элемента \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+указатель на нужный элемент 
+\end{DoxyReturn}
+\Hypertarget{_vector_8h_a7947fe57d9b961845150defd95d89625}\index{Vector.h@{Vector.h}!vectorGetSize@{vectorGetSize}}
+\index{vectorGetSize@{vectorGetSize}!Vector.h@{Vector.h}}
+\doxysubsubsection{\texorpdfstring{vectorGetSize()}{vectorGetSize()}}
+{\footnotesize\ttfamily \label{_vector_8h_a7947fe57d9b961845150defd95d89625} 
+size\+\_\+t vector\+Get\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{}\end{DoxyParamCaption})}
+
+Получить размер вектора 
+\begin{DoxyParams}{Parameters}
+{\em vector} & указатель на вектор \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество элементов в векторе 
+\end{DoxyReturn}
+\Hypertarget{_vector_8h_a1f9b0a05ac8a6b3d3fc7cb35a3e77dc5}\index{Vector.h@{Vector.h}!vectorInit@{vectorInit}}
+\index{vectorInit@{vectorInit}!Vector.h@{Vector.h}}
+\doxysubsubsection{\texorpdfstring{vectorInit()}{vectorInit()}}
+{\footnotesize\ttfamily \label{_vector_8h_a1f9b0a05ac8a6b3d3fc7cb35a3e77dc5} 
+int vector\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{size\+\_\+t}]{element\+Size}{}\end{DoxyParamCaption})}
+
+Инициализация вектора 
+\begin{DoxyParams}{Parameters}
+{\em vector} & указатель на вектор \\
+\hline
+{\em element\+Size} & размер элемента вектора в байтах \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если инициализация прошла без ошибок, в противном случае -\/ 0 
+\end{DoxyReturn}
+\Hypertarget{_vector_8h_a087fb704c3be26f36327476fd27853e4}\index{Vector.h@{Vector.h}!vectorPush@{vectorPush}}
+\index{vectorPush@{vectorPush}!Vector.h@{Vector.h}}
+\doxysubsubsection{\texorpdfstring{vectorPush()}{vectorPush()}}
+{\footnotesize\ttfamily \label{_vector_8h_a087fb704c3be26f36327476fd27853e4} 
+int vector\+Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{element}{}\end{DoxyParamCaption})}
+
+Добавить элемент в вектор 
+\begin{DoxyParams}{Parameters}
+{\em vector} & указатель на вектор \\
+\hline
+{\em element} & добавляемый элемент \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если добавление прошло без ошибок, в противном случае -\/ 0 
+\end{DoxyReturn}
+\Hypertarget{_vector_8h_ab03c01f1a4ee13945509a467d9e88573}\index{Vector.h@{Vector.h}!vectorResize@{vectorResize}}
+\index{vectorResize@{vectorResize}!Vector.h@{Vector.h}}
+\doxysubsubsection{\texorpdfstring{vectorResize()}{vectorResize()}}
+{\footnotesize\ttfamily \label{_vector_8h_ab03c01f1a4ee13945509a467d9e88573} 
+int vector\+Resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{size\+\_\+t}]{capasity}{}\end{DoxyParamCaption})}
+
+Изменить реальный размер вектора (capacity) 
+\begin{DoxyParams}{Parameters}
+{\em vector} & указатель на вектор \\
+\hline
+{\em capasity} & новый размер вектора \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если изменение размера прошло без ошибок, в противном случае -\/ 0 
+\end{DoxyReturn}
+\Hypertarget{_vector_8h_a3df0e267e82ada86f061041de99ff350}\index{Vector.h@{Vector.h}!vectorSetElement@{vectorSetElement}}
+\index{vectorSetElement@{vectorSetElement}!Vector.h@{Vector.h}}
+\doxysubsubsection{\texorpdfstring{vectorSetElement()}{vectorSetElement()}}
+{\footnotesize\ttfamily \label{_vector_8h_a3df0e267e82ada86f061041de99ff350} 
+int vector\+Set\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{size\+\_\+t}]{index}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{element}{}\end{DoxyParamCaption})}
+
+Изменить элемент вектора 
+\begin{DoxyParams}{Parameters}
+{\em vector} & указатель на вектор \\
+\hline
+{\em index} & индекс изменяемого элемента \\
+\hline
+{\em element} & указатель на новый элемент \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если изменение прошло без ошибок, в противном случае -\/ 0 
+\end{DoxyReturn}
+\Hypertarget{_vector_8h_af050b8a0206803433d518c4a8561e0f2}\index{Vector.h@{Vector.h}!vectorSort@{vectorSort}}
+\index{vectorSort@{vectorSort}!Vector.h@{Vector.h}}
+\doxysubsubsection{\texorpdfstring{vectorSort()}{vectorSort()}}
+{\footnotesize\ttfamily \label{_vector_8h_af050b8a0206803433d518c4a8561e0f2} 
+void vector\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{int(\texorpdfstring{$\ast$}{*}}]{compare~}{)(const void \texorpdfstring{$\ast$}{*}, const void \texorpdfstring{$\ast$}{*})}\end{DoxyParamCaption})}
+
+Отсортировать вектор 
+\begin{DoxyParams}{Parameters}
+{\em vector} & указатель на вектор \\
+\hline
+{\em compare} & указатель на функцию сравнения элементов вектора \\
+\hline
+\end{DoxyParams}

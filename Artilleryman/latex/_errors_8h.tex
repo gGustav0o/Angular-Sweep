@@ -1,0 +1,50 @@
+\doxysection{Errors.\+h File Reference}
+\hypertarget{_errors_8h}{}\label{_errors_8h}\index{Errors.h@{Errors.h}}
+
+
+Заголовочный файл обработчика ошибок.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_errors_8h_a59e56af19e754a6aa26a612ebf91d05f}\label{_errors_8h_a59e56af19e754a6aa26a612ebf91d05f} 
+enum {\bfseries Error\+Code} \{ \newline
+{\bfseries UNEXPECTED\+\_\+\+NUMBER\+\_\+\+OF\+\_\+\+ARGUMENTS}
+, {\bfseries FILE\+\_\+\+OPENING\+\_\+\+ERROR}
+, {\bfseries FILE\+\_\+\+CLOSING\+\_\+\+ERROR}
+, {\bfseries FILE\+\_\+\+READING\+\_\+\+ERROR}
+, \newline
+{\bfseries MEMORY\+\_\+\+ERROR}
+, {\bfseries NULL\+\_\+\+POINTER\+\_\+\+ERROR}
+, {\bfseries CALCULATING\+\_\+\+ERROR}
+, {\bfseries UNEXPECTED\+\_\+\+ARGUMENT}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_errors_8h_a21db7a358fa64f9fe3addc7441097637}{handle\+Error}} (enum Error\+Code error\+Code)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Заголовочный файл обработчика ошибок. 
+
+Содержит константы кодов ошибок и объявление функции обработки ошибок. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_errors_8h_a21db7a358fa64f9fe3addc7441097637}\index{Errors.h@{Errors.h}!handleError@{handleError}}
+\index{handleError@{handleError}!Errors.h@{Errors.h}}
+\doxysubsubsection{\texorpdfstring{handleError()}{handleError()}}
+{\footnotesize\ttfamily \label{_errors_8h_a21db7a358fa64f9fe3addc7441097637} 
+void handle\+Error (\begin{DoxyParamCaption}\item[{enum Error\+Code}]{error\+Code}{}\end{DoxyParamCaption})}
+
+Выводит сообщение об ошибке и завершает программу 
+\begin{DoxyParams}{Parameters}
+{\em error\+Code} & код ошибки \\
+\hline
+\end{DoxyParams}

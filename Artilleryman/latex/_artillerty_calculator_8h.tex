@@ -1,0 +1,176 @@
+\doxysection{Artillerty\+Calculator.\+h File Reference}
+\hypertarget{_artillerty_calculator_8h}{}\label{_artillerty_calculator_8h}\index{ArtillertyCalculator.h@{ArtillertyCalculator.h}}
+
+
+Заголовочный файл модуля, в котором производятся рассчеты.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include "{}Errors.\+h"{}}\newline
+{\ttfamily \#include "{}Vector.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_point}{Point}}
+\item 
+struct \mbox{\hyperlink{struct_position}{Position}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_artillerty_calculator_8h_abcb65adb04d8110ffc48975669aa5487}{compare\+Positions}} (const void \texorpdfstring{$\ast$}{*}p, const void \texorpdfstring{$\ast$}{*}q)
+\item 
+double \mbox{\hyperlink{_artillerty_calculator_8h_a362ac5a4d90f8f502b417a6b9eb0bb25}{get\+Distance}} (const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}a, const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}b)
+\item 
+int \mbox{\hyperlink{_artillerty_calculator_8h_aebf854e9a0a0a52f088dfb632b1e0a24}{calculate\+Distances}} (const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}points, double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}distances, size\+\_\+t points\+Number)
+\item 
+int \mbox{\hyperlink{_artillerty_calculator_8h_a94350a11418694e734812bcb76b5d221}{get\+Points\+Inside}} (size\+\_\+t point\+Index, int radius, size\+\_\+t size, const double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}distances, const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}points, \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}best\+Position)
+\item 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_artillerty_calculator_8h_a309f1346df22e660341a70ad1898cd38}{init\+Distances}} (const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}points, size\+\_\+t size)
+\item 
+\mbox{\hyperlink{struct_point}{Point}} \mbox{\hyperlink{_artillerty_calculator_8h_a92922665b3d2bfce640af99fdf9df330}{get\+Circle\+Center}} (const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}position, const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}point, int radius)
+\item 
+size\+\_\+t \mbox{\hyperlink{_artillerty_calculator_8h_aac33938e608b6628beb5a199cab0d36d}{calculate\+Target}} (const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}points, \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}optimal\+Point, size\+\_\+t size, int radius)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Заголовочный файл модуля, в котором производятся рассчеты. 
+
+Angular Sweep Time Complexity\+: O(n\texorpdfstring{$\ast$}{*}n\texorpdfstring{$\ast$}{*}lon(n))
+
+В этом файле перечислены функции и структуры, используемые для рассчета. Модуль реализует алгоритм угловой развертки. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_artillerty_calculator_8h_aebf854e9a0a0a52f088dfb632b1e0a24}\index{ArtillertyCalculator.h@{ArtillertyCalculator.h}!calculateDistances@{calculateDistances}}
+\index{calculateDistances@{calculateDistances}!ArtillertyCalculator.h@{ArtillertyCalculator.h}}
+\doxysubsubsection{\texorpdfstring{calculateDistances()}{calculateDistances()}}
+{\footnotesize\ttfamily \label{_artillerty_calculator_8h_aebf854e9a0a0a52f088dfb632b1e0a24} 
+int calculate\+Distances (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}}]{points}{, }\item[{double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{distances}{, }\item[{size\+\_\+t}]{points\+Number}{}\end{DoxyParamCaption})}
+
+Рассчитать расстояния между всеми данными точками 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em points} & массив точек \\
+\hline
+\mbox{\texttt{ out}}  & {\em distances} & указатель на матрицу расстояний \\
+\hline
+\mbox{\texttt{ in}}  & {\em points\+Number} & количество точек \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если рассчет прошел без ошибок, в противном случае -\/ 0 
+\end{DoxyReturn}
+\Hypertarget{_artillerty_calculator_8h_aac33938e608b6628beb5a199cab0d36d}\index{ArtillertyCalculator.h@{ArtillertyCalculator.h}!calculateTarget@{calculateTarget}}
+\index{calculateTarget@{calculateTarget}!ArtillertyCalculator.h@{ArtillertyCalculator.h}}
+\doxysubsubsection{\texorpdfstring{calculateTarget()}{calculateTarget()}}
+{\footnotesize\ttfamily \label{_artillerty_calculator_8h_aac33938e608b6628beb5a199cab0d36d} 
+size\+\_\+t calculate\+Target (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}}]{points}{, }\item[{\mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}}]{optimal\+Point}{, }\item[{size\+\_\+t}]{size}{, }\item[{int}]{radius}{}\end{DoxyParamCaption})}
+
+Найти центр окружности заданного радиуа, содержащей максимальное количество точек 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em points} & массив точек \\
+\hline
+\mbox{\texttt{ out}}  & {\em optimal\+Point} & указатель на точку, куда будет произведена запись данных о центре окружности \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & количество точек \\
+\hline
+\mbox{\texttt{ in}}  & {\em radius} & радиус окружности \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество точек внутри окружности 
+\end{DoxyReturn}
+\Hypertarget{_artillerty_calculator_8h_abcb65adb04d8110ffc48975669aa5487}\index{ArtillertyCalculator.h@{ArtillertyCalculator.h}!comparePositions@{comparePositions}}
+\index{comparePositions@{comparePositions}!ArtillertyCalculator.h@{ArtillertyCalculator.h}}
+\doxysubsubsection{\texorpdfstring{comparePositions()}{comparePositions()}}
+{\footnotesize\ttfamily \label{_artillerty_calculator_8h_abcb65adb04d8110ffc48975669aa5487} 
+int compare\+Positions (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{p}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{q}{}\end{DoxyParamCaption})}
+
+Функция сравнения позиций точек для сортировки 
+\begin{DoxyParams}{Parameters}
+{\em p,q} & указатели на позиции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если угол позиции p меньше угла позиции q, в ином лучае -\/ -\/1 
+\end{DoxyReturn}
+\Hypertarget{_artillerty_calculator_8h_a92922665b3d2bfce640af99fdf9df330}\index{ArtillertyCalculator.h@{ArtillertyCalculator.h}!getCircleCenter@{getCircleCenter}}
+\index{getCircleCenter@{getCircleCenter}!ArtillertyCalculator.h@{ArtillertyCalculator.h}}
+\doxysubsubsection{\texorpdfstring{getCircleCenter()}{getCircleCenter()}}
+{\footnotesize\ttfamily \label{_artillerty_calculator_8h_a92922665b3d2bfce640af99fdf9df330} 
+\mbox{\hyperlink{struct_point}{Point}} get\+Circle\+Center (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}}]{position}{, }\item[{const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}}]{point}{, }\item[{int}]{radius}{}\end{DoxyParamCaption})}
+
+Вычислить центр окружности по лежащей на окружности точке, углу и радиусу 
+\begin{DoxyParams}{Parameters}
+{\em position} & указатель на позицию центра окружности относительно точки \\
+\hline
+{\em point} & указатель на точку \\
+\hline
+{\em radius} & радиус окружности \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+центр окружности 
+\end{DoxyReturn}
+\Hypertarget{_artillerty_calculator_8h_a362ac5a4d90f8f502b417a6b9eb0bb25}\index{ArtillertyCalculator.h@{ArtillertyCalculator.h}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!ArtillertyCalculator.h@{ArtillertyCalculator.h}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily \label{_artillerty_calculator_8h_a362ac5a4d90f8f502b417a6b9eb0bb25} 
+double get\+Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+Рассчитать евклидово расстояние между точками 
+\begin{DoxyParams}{Parameters}
+{\em a,b} & указатели на точки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+расстояние между точками в двумерном евклидовом пространстве 
+\end{DoxyReturn}
+\Hypertarget{_artillerty_calculator_8h_a94350a11418694e734812bcb76b5d221}\index{ArtillertyCalculator.h@{ArtillertyCalculator.h}!getPointsInside@{getPointsInside}}
+\index{getPointsInside@{getPointsInside}!ArtillertyCalculator.h@{ArtillertyCalculator.h}}
+\doxysubsubsection{\texorpdfstring{getPointsInside()}{getPointsInside()}}
+{\footnotesize\ttfamily \label{_artillerty_calculator_8h_a94350a11418694e734812bcb76b5d221} 
+int get\+Points\+Inside (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{point\+Index}{, }\item[{int}]{radius}{, }\item[{size\+\_\+t}]{size}{, }\item[{const double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{distances}{, }\item[{const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}}]{points}{, }\item[{\mbox{\hyperlink{struct_position}{Position}} \texorpdfstring{$\ast$}{*}}]{best\+Position}{}\end{DoxyParamCaption})}
+
+Алгоритм угловой развертки. Рассчитать наилучшее положение окружности, содержащей заданную точку. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em point\+Index} & индекс точки в масиве \\
+\hline
+\mbox{\texttt{ in}}  & {\em radius} & радиус окружности \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & количество точек \\
+\hline
+\mbox{\texttt{ in}}  & {\em distances} & матрица расстояний между точками \\
+\hline
+\mbox{\texttt{ in}}  & {\em points} & массив точек \\
+\hline
+\mbox{\texttt{ out}}  & {\em наилучшая} & позиция центра окружности относительно заданной точки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество точек, попавших в окружность, в наилучшей позиции 
+\end{DoxyReturn}
+\Hypertarget{_artillerty_calculator_8h_a309f1346df22e660341a70ad1898cd38}\index{ArtillertyCalculator.h@{ArtillertyCalculator.h}!initDistances@{initDistances}}
+\index{initDistances@{initDistances}!ArtillertyCalculator.h@{ArtillertyCalculator.h}}
+\doxysubsubsection{\texorpdfstring{initDistances()}{initDistances()}}
+{\footnotesize\ttfamily \label{_artillerty_calculator_8h_a309f1346df22e660341a70ad1898cd38} 
+double \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} init\+Distances (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_point}{Point}} \texorpdfstring{$\ast$}{*}}]{points}{, }\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+Создать матрицу расстояний между точками Создается верхнетреугольная матрица с нулями на главной диагонали, содержащая расстояния между точками \begin{DoxyVerb}      a b c ...
+
+  a   0
+  b   # 0
+  c   # # 0
+ ...  # # # ...
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em points} & массив точек \\
+\hline
+{\em size} & количество точек \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+матрица расстояний 
+\end{DoxyReturn}
