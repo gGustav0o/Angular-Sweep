@@ -2,7 +2,7 @@
 \hypertarget{_vector_8h}{}\label{_vector_8h}\index{Vector.h@{Vector.h}}
 
 
-Простая реализация вектора.  
+РџСЂРѕСЃС‚Р°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РІРµРєС‚РѕСЂР°.  
 
 
 {\ttfamily \#include $<$math.\+h$>$}\newline
@@ -46,7 +46,7 @@ void \mbox{\hyperlink{_vector_8h_af050b8a0206803433d518c4a8561e0f2}{vector\+Sort
 
 
 \doxysubsection{Detailed Description}
-Простая реализация вектора. 
+РџСЂРѕСЃС‚Р°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РІРµРєС‚РѕСЂР°. 
 
 
 
@@ -57,9 +57,10 @@ void \mbox{\hyperlink{_vector_8h_af050b8a0206803433d518c4a8561e0f2}{vector\+Sort
 {\footnotesize\ttfamily \label{_vector_8h_a728f0763820a4bf648a46cd465a787a6} 
 void vector\+Clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{}\end{DoxyParamCaption})}
 
-Очистить вектор Освоождает память, выделенную под элементы вектора 
+РћС‡РёСЃС‚РёС‚СЊ РІРµРєС‚РѕСЂ~\newline
+РћСЃРІРѕРѕР¶РґР°РµС‚ РїР°РјСЏС‚СЊ, РІС‹РґРµР»РµРЅРЅСѓСЋ РїРѕРґ СЌР»РµРјРµРЅС‚С‹ РІРµРєС‚РѕСЂР° 
 \begin{DoxyParams}{Parameters}
-{\em vector} & указатель на вектор \\
+{\em vector} & СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІРµРєС‚РѕСЂ \\
 \hline
 \end{DoxyParams}
 \Hypertarget{_vector_8h_a82bd05a07ad24cec9e527fc32c585724}\index{Vector.h@{Vector.h}!vectorDeleteElement@{vectorDeleteElement}}
@@ -68,15 +69,15 @@ void vector\+Clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vecto
 {\footnotesize\ttfamily \label{_vector_8h_a82bd05a07ad24cec9e527fc32c585724} 
 int vector\+Delete\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{size\+\_\+t}]{index}{}\end{DoxyParamCaption})}
 
-Удалить элемент вектора 
+РЈРґР°Р»РёС‚СЊ СЌР»РµРјРµРЅС‚ РІРµРєС‚РѕСЂР° 
 \begin{DoxyParams}{Parameters}
-{\em vector} & указатель на вектор \\
+{\em vector} & СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІРµРєС‚РѕСЂ \\
 \hline
-{\em index} & индекс удаляемого элемента \\
+{\em index} & РёРЅРґРµРєСЃ СѓРґР°Р»СЏРµРјРѕРіРѕ СЌР»РµРјРµРЅС‚Р° \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-1, если удаление прошло без ошибок, в противном случае -\/ 0 
+1, РµСЃР»Рё СѓРґР°Р»РµРЅРёРµ РїСЂРѕС€Р»Рѕ Р±РµР· РѕС€РёР±РѕРє, РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ -\/ 0 
 \end{DoxyReturn}
 \Hypertarget{_vector_8h_ad611858a02f060c642261e7b135233e5}\index{Vector.h@{Vector.h}!vectorGetElement@{vectorGetElement}}
 \index{vectorGetElement@{vectorGetElement}!Vector.h@{Vector.h}}
@@ -84,15 +85,15 @@ int vector\+Delete\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{str
 {\footnotesize\ttfamily \label{_vector_8h_ad611858a02f060c642261e7b135233e5} 
 void \texorpdfstring{$\ast$}{*} vector\+Get\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{size\+\_\+t}]{index}{}\end{DoxyParamCaption})}
 
-Получить элемент вектора 
+РџРѕР»СѓС‡РёС‚СЊ СЌР»РµРјРµРЅС‚ РІРµРєС‚РѕСЂР° 
 \begin{DoxyParams}{Parameters}
-{\em vector} & указатель на вектор \\
+{\em vector} & СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІРµРєС‚РѕСЂ \\
 \hline
-{\em index} & индекс элемента \\
+{\em index} & РёРЅРґРµРєСЃ СЌР»РµРјРµРЅС‚Р° \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-указатель на нужный элемент 
+СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅСѓР¶РЅС‹Р№ СЌР»РµРјРµРЅС‚ 
 \end{DoxyReturn}
 \Hypertarget{_vector_8h_a7947fe57d9b961845150defd95d89625}\index{Vector.h@{Vector.h}!vectorGetSize@{vectorGetSize}}
 \index{vectorGetSize@{vectorGetSize}!Vector.h@{Vector.h}}
@@ -100,13 +101,13 @@ void \texorpdfstring{$\ast$}{*} vector\+Get\+Element (\begin{DoxyParamCaption}\i
 {\footnotesize\ttfamily \label{_vector_8h_a7947fe57d9b961845150defd95d89625} 
 size\+\_\+t vector\+Get\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{}\end{DoxyParamCaption})}
 
-Получить размер вектора 
+РџРѕР»СѓС‡РёС‚СЊ СЂР°Р·РјРµСЂ РІРµРєС‚РѕСЂР° 
 \begin{DoxyParams}{Parameters}
-{\em vector} & указатель на вектор \\
+{\em vector} & СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІРµРєС‚РѕСЂ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-количество элементов в векторе 
+РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РІ РІРµРєС‚РѕСЂРµ 
 \end{DoxyReturn}
 \Hypertarget{_vector_8h_a1f9b0a05ac8a6b3d3fc7cb35a3e77dc5}\index{Vector.h@{Vector.h}!vectorInit@{vectorInit}}
 \index{vectorInit@{vectorInit}!Vector.h@{Vector.h}}
@@ -114,15 +115,15 @@ size\+\_\+t vector\+Get\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyper
 {\footnotesize\ttfamily \label{_vector_8h_a1f9b0a05ac8a6b3d3fc7cb35a3e77dc5} 
 int vector\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{size\+\_\+t}]{element\+Size}{}\end{DoxyParamCaption})}
 
-Инициализация вектора 
+РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РІРµРєС‚РѕСЂР° 
 \begin{DoxyParams}{Parameters}
-{\em vector} & указатель на вектор \\
+{\em vector} & СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІРµРєС‚РѕСЂ \\
 \hline
-{\em element\+Size} & размер элемента вектора в байтах \\
+{\em element\+Size} & СЂР°Р·РјРµСЂ СЌР»РµРјРµРЅС‚Р° РІРµРєС‚РѕСЂР° РІ Р±Р°Р№С‚Р°С… \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-1, если инициализация прошла без ошибок, в противном случае -\/ 0 
+1, РµСЃР»Рё РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїСЂРѕС€Р»Р° Р±РµР· РѕС€РёР±РѕРє, РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ -\/ 0 
 \end{DoxyReturn}
 \Hypertarget{_vector_8h_a087fb704c3be26f36327476fd27853e4}\index{Vector.h@{Vector.h}!vectorPush@{vectorPush}}
 \index{vectorPush@{vectorPush}!Vector.h@{Vector.h}}
@@ -130,15 +131,15 @@ int vector\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}
 {\footnotesize\ttfamily \label{_vector_8h_a087fb704c3be26f36327476fd27853e4} 
 int vector\+Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{element}{}\end{DoxyParamCaption})}
 
-Добавить элемент в вектор 
+Р”РѕР±Р°РІРёС‚СЊ СЌР»РµРјРµРЅС‚ РІ РІРµРєС‚РѕСЂ 
 \begin{DoxyParams}{Parameters}
-{\em vector} & указатель на вектор \\
+{\em vector} & СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІРµРєС‚РѕСЂ \\
 \hline
-{\em element} & добавляемый элемент \\
+{\em element} & РґРѕР±Р°РІР»СЏРµРјС‹Р№ СЌР»РµРјРµРЅС‚ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-1, если добавление прошло без ошибок, в противном случае -\/ 0 
+1, РµСЃР»Рё РґРѕР±Р°РІР»РµРЅРёРµ РїСЂРѕС€Р»Рѕ Р±РµР· РѕС€РёР±РѕРє, РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ -\/ 0 
 \end{DoxyReturn}
 \Hypertarget{_vector_8h_ab03c01f1a4ee13945509a467d9e88573}\index{Vector.h@{Vector.h}!vectorResize@{vectorResize}}
 \index{vectorResize@{vectorResize}!Vector.h@{Vector.h}}
@@ -146,15 +147,15 @@ int vector\+Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}
 {\footnotesize\ttfamily \label{_vector_8h_ab03c01f1a4ee13945509a467d9e88573} 
 int vector\+Resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{size\+\_\+t}]{capasity}{}\end{DoxyParamCaption})}
 
-Изменить реальный размер вектора (capacity) 
+РР·РјРµРЅРёС‚СЊ СЂРµР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ РІРµРєС‚РѕСЂР° (capacity) 
 \begin{DoxyParams}{Parameters}
-{\em vector} & указатель на вектор \\
+{\em vector} & СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІРµРєС‚РѕСЂ \\
 \hline
-{\em capasity} & новый размер вектора \\
+{\em capasity} & РЅРѕРІС‹Р№ СЂР°Р·РјРµСЂ РІРµРєС‚РѕСЂР° \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-1, если изменение размера прошло без ошибок, в противном случае -\/ 0 
+1, РµСЃР»Рё РёР·РјРµРЅРµРЅРёРµ СЂР°Р·РјРµСЂР° РїСЂРѕС€Р»Рѕ Р±РµР· РѕС€РёР±РѕРє, РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ -\/ 0 
 \end{DoxyReturn}
 \Hypertarget{_vector_8h_a3df0e267e82ada86f061041de99ff350}\index{Vector.h@{Vector.h}!vectorSetElement@{vectorSetElement}}
 \index{vectorSetElement@{vectorSetElement}!Vector.h@{Vector.h}}
@@ -162,17 +163,17 @@ int vector\+Resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vecto
 {\footnotesize\ttfamily \label{_vector_8h_a3df0e267e82ada86f061041de99ff350} 
 int vector\+Set\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{size\+\_\+t}]{index}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{element}{}\end{DoxyParamCaption})}
 
-Изменить элемент вектора 
+РР·РјРµРЅРёС‚СЊ СЌР»РµРјРµРЅС‚ РІРµРєС‚РѕСЂР° 
 \begin{DoxyParams}{Parameters}
-{\em vector} & указатель на вектор \\
+{\em vector} & СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІРµРєС‚РѕСЂ \\
 \hline
-{\em index} & индекс изменяемого элемента \\
+{\em index} & РёРЅРґРµРєСЃ РёР·РјРµРЅСЏРµРјРѕРіРѕ СЌР»РµРјРµРЅС‚Р° \\
 \hline
-{\em element} & указатель на новый элемент \\
+{\em element} & СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅРѕРІС‹Р№ СЌР»РµРјРµРЅС‚ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-1, если изменение прошло без ошибок, в противном случае -\/ 0 
+1, РµСЃР»Рё РёР·РјРµРЅРµРЅРёРµ РїСЂРѕС€Р»Рѕ Р±РµР· РѕС€РёР±РѕРє, РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ -\/ 0 
 \end{DoxyReturn}
 \Hypertarget{_vector_8h_af050b8a0206803433d518c4a8561e0f2}\index{Vector.h@{Vector.h}!vectorSort@{vectorSort}}
 \index{vectorSort@{vectorSort}!Vector.h@{Vector.h}}
@@ -180,10 +181,10 @@ int vector\+Set\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct
 {\footnotesize\ttfamily \label{_vector_8h_af050b8a0206803433d518c4a8561e0f2} 
 void vector\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} \texorpdfstring{$\ast$}{*}}]{vector}{, }\item[{int(\texorpdfstring{$\ast$}{*}}]{compare~}{)(const void \texorpdfstring{$\ast$}{*}, const void \texorpdfstring{$\ast$}{*})}\end{DoxyParamCaption})}
 
-Отсортировать вектор 
+РћС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ РІРµРєС‚РѕСЂ 
 \begin{DoxyParams}{Parameters}
-{\em vector} & указатель на вектор \\
+{\em vector} & СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІРµРєС‚РѕСЂ \\
 \hline
-{\em compare} & указатель на функцию сравнения элементов вектора \\
+{\em compare} & СѓРєР°Р·Р°С‚РµР»СЊ РЅР° С„СѓРЅРєС†РёСЋ СЃСЂР°РІРЅРµРЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ РІРµРєС‚РѕСЂР° \\
 \hline
 \end{DoxyParams}

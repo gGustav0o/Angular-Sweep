@@ -23,7 +23,7 @@
 	@var Vector::size
 		Количество элементов в векторе
 	@var Vector::capacity
-		Реальный размер вектора в элементах.
+		Реальный размер вектора в элементах
 	@var Vector::elementSize
 		Размер элемента в байтах
  **/
@@ -92,7 +92,7 @@ void* vectorGetElement(Vector* vector, size_t index);
 int vectorResize(Vector* vector, size_t capasity);
 
 /**
-	Очистить вектор
+	Очистить вектор\n
 	Освоождает память, выделенную под элементы вектора
 	\param vector указатель на вектор
 **/

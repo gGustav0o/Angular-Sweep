@@ -2,10 +2,10 @@
 	\file
 	\brief Заголовочный файл модуля, в котором производятся рассчеты.
 
-	Angular Sweep
-	Time Complexity: O(n*n*lon(n))
+	Angular Sweep\n
+	Time Complexity: O(n*n*lon(n))\n\n
 
-	В этом файле перечислены функции и структуры, используемые для рассчета.
+	В этом файле перечислены функции и структуры, используемые для рассчета.\n
 	Модуль реализует алгоритм угловой развертки. 
 **/
 
@@ -29,7 +29,7 @@ typedef struct {
 } Point;
 
 /** @struct Position
-	Описывает положение точки.
+	Описывает положение точки.\n
 	Радиус окружности и точка, относительно которой мы задаем положение, известны, значит положение точки однозначно задается углом относительно оси X. 
 	@var Position::angle
 		Угол относительно оси X
@@ -77,8 +77,8 @@ int calculateDistances(const Point* points, double** distances, size_t pointsNum
 int getPointsInside(size_t pointIndex, int radius, size_t size, const double** distances, const Point* points, Position* bestPosition);
 
 /**
-	Создать матрицу расстояний между точками
-	Создается верхнетреугольная матрица с нулями на главной диагонали, содержащая расстояния между точками
+	Создать матрицу расстояний между точками\n
+	Создается верхнетреугольная матрица с нулями на главной диагонали, содержащая расстояния между точками\n\n
 
 			  a b c ...
 
@@ -86,7 +86,7 @@ int getPointsInside(size_t pointIndex, int radius, size_t size, const double** d
 		  b   # 0
 		  c   # # 0
 		 ...  # # # ...
-
+	\n
 	\param points массив точек
 	\param size количество точек
 	\return матрица расстояний
