@@ -1,8 +1,8 @@
 /**
 	\file
-	\brief Основной файл программы
+	\brief ГЋГ±Г­Г®ГўГ­Г®Г© ГґГ Г©Г« ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
 
-	Считывает аргументы и данные из файла, выводит результаты вычислений.
+	Г‘Г·ГЁГІГ»ГўГ ГҐГІ Г Г°ГЈГіГ¬ГҐГ­ГІГ» ГЁ Г¤Г Г­Г­Г»ГҐ ГЁГ§ ГґГ Г©Г«Г , ГўГ»ГўГ®Г¤ГЁГІ Г°ГҐГ§ГіГ«ГјГІГ ГІГ» ГўГ»Г·ГЁГ±Г«ГҐГ­ГЁГ©.
 **/
 
 #include "ArtillertyCalculator.h"
@@ -19,10 +19,10 @@
 #define ARRAY_BASE_SIZE 16
 
 /**
-	Считывает данные из файла в массив
-	\param[in] fileName имя файла
-	\param[out] points указатель на массив, в который будет производиться запись
-	\return количетво считанных элементов
+	Г‘Г·ГЁГІГ»ГўГ ГҐГІ Г¤Г Г­Г­Г»ГҐ ГЁГ§ ГґГ Г©Г«Г  Гў Г¬Г Г±Г±ГЁГў
+	\param[in] fileName ГЁГ¬Гї ГґГ Г©Г«Г 
+	\param[out] points ГіГЄГ Г§Г ГІГҐГ«Гј Г­Г  Г¬Г Г±Г±ГЁГў, Гў ГЄГ®ГІГ®Г°Г»Г© ГЎГіГ¤ГҐГІ ГЇГ°Г®ГЁГ§ГўГ®Г¤ГЁГІГјГ±Гї Г§Г ГЇГЁГ±Гј
+	\return ГЄГ®Г«ГЁГ·ГҐГІГўГ® Г±Г·ГЁГІГ Г­Г­Г»Гµ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў
 **/
 int readPoints(const char *fileName, Point** points) {
 	FILE* file;
@@ -42,7 +42,7 @@ int readPoints(const char *fileName, Point** points) {
 		size_t actualSize = 0;
 		int n;
 
-        while ((n = fscanf(file, "%d, %d\n", &x, &y)) != EOF)
+        while ((n = fscanf(file, "%d , %d\n", &x, &y)) != EOF)
         {
 			if (n != 2 
 				|| x < MIN_COORDINATE || x > MAX_COORDINATE
